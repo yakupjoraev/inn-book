@@ -1,0 +1,221 @@
+.benifits {
+  padding: 60px 0;
+
+  // .benifits__inner
+
+  &__inner {}
+
+  // .benifits__title
+
+  &__title {
+    text-align: center;
+    font-weight: 700;
+    font-size: 35px;
+    line-height: 43px;
+
+    span {
+      color: var(--second-color);
+    }
+
+    @media (max-width: $breakpoint768) {
+      font-size: 24px;
+      line-height: 29px;
+    }
+  }
+}
+
+.benifits-programms {
+  margin-bottom: 130px;
+
+  .benifits__title {
+    margin-bottom: 40px;
+  }
+
+  // .benifits-programms__list
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 40px;
+    row-gap: 40px;
+
+    @media (max-width: $breakpoint992) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (max-width: $breakpoint768) {
+      grid-template-columns: repeat(1, 1fr);
+      row-gap: 20px;
+    }
+  }
+
+  // .benifits-programms__item
+
+  &__item {
+    display: grid;
+    justify-items: center;
+    align-self: baseline;
+    row-gap: 10px;
+    max-width: 360px;
+    padding: 15px 30px;
+    text-align: center;
+
+    @media (max-width: $breakpoint768) {
+      max-width: 100%;
+    }
+  }
+
+  // .benifits-programms__img
+
+  &__img {}
+
+  // .benifits-programms__item-title
+
+  &__item-title {
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 27px;
+
+    @media (max-width: $breakpoint768) {
+      font-size: 18px;
+      line-height: 22px;
+    }
+  }
+
+  // .benifits-programms__item-descr
+
+  &__item-descr {}
+}
+
+.benifits-api {
+  margin-top: 50px;
+  padding: 80px 0 50px;
+  margin-bottom: 30px;
+  background-color: #4144E6;
+
+  // .benifits-api__slider
+
+  &__slider {
+    .swiper-pagination-bullet {
+      width: 13px;
+      height: 13px;
+      border: 1px solid #DCE5FF;
+      background-color: transparent;
+      opacity: 1;
+    }
+
+    .swiper-pagination-bullet-active {
+      background-color: #DCE5FF;
+    }
+  }
+
+  // .benifits-api__slider-wrapper
+
+  &__slider-wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 40px;
+
+    @media (max-width: $breakpoint768) {
+      column-gap: 0;
+    }
+  }
+
+  // .benifits-api__slide
+
+  &__slide {
+    display: grid;
+    row-gap: 24px;
+    justify-items: center;
+    flex-shrink: 1;
+    padding: 20px 18px;
+    background-color: var(--white-color);
+    border-radius: 20px;
+
+  }
+
+  // .benifits-api__slide-img
+
+  &__slide-img {}
+
+  // .benifits-api__slide-descr
+
+  &__slide-descr {}
+
+  // .benifits-api__slider-pagination
+
+  &__slider-pagination {
+    position: static;
+    margin-top: 15px;
+  }
+}
+
+
+
+.benifits-crm {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  column-gap: 35px;
+
+  @media (max-width: $breakpoint768) {
+    flex-direction: column-reverse;
+  }
+
+  // .benifits-crm__info
+
+  &__info {
+    flex: 0 1 410px;
+
+    .benifits__title {
+      margin-bottom: 24px;
+      text-align: left;
+
+      @media (max-width: $breakpoint768) {
+        display: none;
+      }
+    }
+
+  }
+
+  // .benifits-crm__descr
+
+  &__descr {
+    margin-bottom: 25px;
+  }
+
+  // .benifits-crm__link
+
+  &__link {
+    width: fit-content;
+
+    @media (max-width: $breakpoint768) {
+      width: 100%;
+    }
+  }
+
+  // .benifits-crm__picture
+
+  &__picture {
+
+    .benifits__title {
+      display: none;
+
+      @media (max-width: $breakpoint768) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  }
+
+  // .benifits-crm__img
+
+  &__img {
+    max-width: 100%;
+
+    @media (max-width: $breakpoint768) {
+      height: 300px;
+    }
+  }
+}

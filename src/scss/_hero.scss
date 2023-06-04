@@ -1,0 +1,142 @@
+.hero {
+  padding: 50px 0;
+  background-color: var(--main-color);
+
+  // .hero__slider
+
+  &__slider {
+    min-height: 486px;
+
+    .swiper-pagination-bullet {
+      width: 13px;
+      height: 13px;
+      border: 1px solid #DCE5FF;
+      background-color: transparent;
+      opacity: 1;
+    }
+
+    .swiper-pagination-bullet-active {
+      background-color: #DCE5FF;
+    }
+  }
+
+  // .hero__slider-wrapper
+
+  &__slider-wrapper {}
+
+  // .hero__slide
+
+  &__slide {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 40px;
+    overflow: hidden;
+
+    @media (max-width: $breakpoint992) {
+      flex-direction: column-reverse;
+      justify-content: center;
+      align-items: center;
+      row-gap: 46px;
+    }
+
+  }
+
+  // .hero__slide-info
+
+  &__slide-info {}
+
+  // .hero__title
+
+  &__title {
+    margin-bottom: 25px;
+    font-weight: 800;
+    font-size: 40px;
+    line-height: 102.3%;
+    color: var(--white-color);
+
+    span {
+      color: var(--second-color);
+    }
+
+    @media (max-width: $breakpoint768) {
+      margin-bottom: 20px;
+      font-size: 39px;
+    }
+  }
+
+  // .hero__slide-text
+
+  &__slide-text {
+    margin-bottom: 15px;
+    color: var(--white-color);
+  }
+
+  // .hero__slide-btns
+
+  &__slide-btns {
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+    margin-top: 26px;
+    white-space: nowrap;
+
+    @media (max-width: $breakpoint992) {
+      padding-bottom: 10px;
+    }
+
+    @media (max-width: $breakpoint768) {
+      flex-direction: column;
+      row-gap: 20px;
+      width: 100%;
+    }
+
+  }
+
+  // .hero__slide-btn
+
+  &__slide-btn {
+
+    @media (max-width: $breakpoint768) {
+      width: 100%;
+    }
+  }
+
+  // .hero__slide-picture
+
+  &__slide-picture {}
+
+  // .hero__slide-img
+
+  &__slide-img {
+    max-width: 100%;
+
+    @media (max-width: $breakpoint992) {
+      height: 300px;
+    }
+
+    @media (max-width: $breakpoint768) {
+      height: 240px;
+    }
+  }
+
+  // .hero__slider-pagination
+
+  &__slider-pagination {
+    position: static;
+    display: flex;
+    justify-content: flex-end;
+    margin-left: -19%;
+
+    @media (max-width: $breakpoint992) {
+      position: absolute;
+      top: 300px !important;
+      margin-left: 0;
+      justify-content: center;
+    }
+
+    @media (max-width: $breakpoint768) {
+      top: 240px !important;
+    }
+
+  }
+}

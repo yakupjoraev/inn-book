@@ -97,6 +97,7 @@ const swiper = new Swiper('.hero__slider', {
 
 });
 
+
 if (window.matchMedia("(max-width: 767px)").matches) {
   const swiper2 = new Swiper('.benifits-api__slider', {
     // Optional parameters
@@ -138,3 +139,29 @@ if (window.matchMedia("(max-width: 767px)").matches) {
   });
 
 }
+
+const swiper5 = new Swiper('.reviews__slider', {
+  // Optional parameters
+  slidesPerView: 1,
+
+  navigation: {
+    nextEl: '.reviews__slider-next',
+    prevEl: '.reviews__slider-prev',
+  },
+
+  // Responsive breakpoints
+  breakpoints: {
+
+    // when window width is >= 480px
+    767: {
+      slidesPerView: 2,
+      spaceBetween: 20
+    },
+    // when window width is >= 640px
+    1025: {
+      slidesPerView: "auto",
+      spaceBetween: 40
+    }
+  }
+
+});

@@ -1,0 +1,128 @@
+.included {
+  margin-bottom: 120px;
+
+  @media (max-width: $breakpoint992) {
+    margin-bottom: 60px;
+  }
+
+
+  // .included__inner
+
+  &__inner {}
+
+  // .included__title
+
+  &__title {
+    margin-bottom: 60px;
+
+    @media (max-width: $breakpoint768) {
+      margin-bottom: 20px;
+    }
+  }
+
+  // .included__steps
+
+  &__steps {
+    display: grid;
+    // grid-auto-flow: column;
+    grid-template-columns: 1fr 75px 1fr 75px 1fr;
+    align-items: center;
+    column-gap: 28px;
+    margin-bottom: 60px;
+
+    @media (max-width: $breakpoint1450) {
+      column-gap: 15px;
+    }
+
+    @media (max-width: $breakpoint992) {
+      grid-template-columns: repeat(1, 1fr);
+      row-gap: 15px;
+    }
+
+    @media (max-width: $breakpoint768) {
+      margin-bottom: 40px;
+    }
+  }
+
+  // .included__step
+
+  &__step {
+    display: grid;
+    height: 100%;
+    row-gap: 10px;
+    padding: 30px;
+    background-color: var(--white-color);
+    border-radius: 10px;
+    text-align: center;
+
+    @media (max-width: $breakpoint1450) {
+      padding: 20px;
+    }
+
+    @media (max-width: $breakpoint992) {}
+  }
+
+  // .included__step-img
+
+  &__step-img {
+    max-width: 238px;
+    width: 100%;
+
+    @media (max-width: $breakpoint1450) {
+      max-width: 180px;
+    }
+
+    @media (max-width: $breakpoint992) {
+      justify-self: center;
+    }
+  }
+
+  // .included__step-label
+
+  &__step-label {
+    height: fit-content;
+    padding: 10px 20px;
+    background-color: var(--second-color);
+    border-radius: 10px;
+    font-size: 16px;
+    line-height: 20px;
+    color: var(--white-color);
+
+    @media (max-width: $breakpoint768) {
+      width: 100%;
+      padding: 10px;
+      font-size: 15px;
+      line-height: 18px;
+    }
+  }
+
+  // .included__arrow
+
+  &__arrow {
+
+    @media (max-width: $breakpoint992) {
+      justify-self: center;
+    }
+  }
+
+  // .included__arrow-img
+
+  &__arrow-img {
+    @media (max-width: $breakpoint992) {
+      transform: rotate(90deg);
+    }
+  }
+
+  // .included__link
+
+  &__link {
+    width: fit-content;
+    margin: 0 auto;
+
+    @media (max-width: $breakpoint992) {
+      width: 100%;
+      text-align: center;
+    }
+
+  }
+}

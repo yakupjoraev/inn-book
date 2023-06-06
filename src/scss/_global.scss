@@ -58,7 +58,7 @@ html {
   padding: 16px 40px;
   background-color: var(--second-color);
   box-shadow: 3px 3px 7px #D9B48D;
-  border-radius: 8px;
+  border-radius: 4px;
   font-weight: 600;
   font-size: 16px;
   line-height: 20px;
@@ -73,11 +73,24 @@ html {
   background-color: transparent;
   border: 2px solid #FF8605;
   box-shadow: 3px 3px 7px #D9B48D;
-  border-radius: 8px;
+  border-radius: 4px;
   font-weight: 600;
   font-size: 16px;
   line-height: 20px;
   color: var(--second-color);
+}
+
+.main-title {
+  text-align: center;
+  font-weight: 700;
+  font-size: 35px;
+  line-height: 43px;
+  color: var(--main-color);
+
+  @media (max-width: $breakpoint768) {
+    font-size: 24px;
+    line-height: 29px;
+  }
 }
 
 // Animations

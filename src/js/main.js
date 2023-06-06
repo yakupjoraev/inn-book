@@ -84,83 +84,154 @@ function subMenuList() {
 
 subMenuList();
 
-const swiper = new Swiper('.hero__slider', {
-  // Optional parameters
-  // direction: 'vertical',
-  loop: false,
+function heroSlider() {
+  const container = document.querySelector('.hero');
 
-  // If we need pagination
-  pagination: {
-    el: '.hero__slider-pagination',
-  },
+  if (!container) {
+    return null
+  }
 
-});
-
-
-if (window.matchMedia("(max-width: 767px)").matches) {
-  const swiper2 = new Swiper('.benifits-api__slider', {
+  const swiper = new Swiper('.hero__slider', {
     // Optional parameters
     // direction: 'vertical',
-    spaceBetween: 10,
     loop: false,
 
     // If we need pagination
     pagination: {
-      el: '.benifits-api__slider-pagination',
-    },
-
-  });
-
-  const swiper3 = new Swiper('.possibility-main__slider', {
-    // Optional parameters
-    // direction: 'vertical',
-    spaceBetween: 10,
-    loop: false,
-
-    // If we need pagination
-    pagination: {
-      el: '.possibility-main__slider-pagination',
-    },
-
-  });
-
-  const swiper4 = new Swiper('.possibility-secondary__slider', {
-    // Optional parameters
-    // direction: 'vertical',
-    spaceBetween: 10,
-    loop: false,
-
-    // If we need pagination
-    pagination: {
-      el: '.possibility-secondary__slider-pagination',
+      el: '.hero__slider-pagination',
     },
 
   });
 
 }
+heroSlider();
 
-const swiper5 = new Swiper('.reviews__slider', {
-  // Optional parameters
-  slidesPerView: 1,
+function benefitsSlider() {
+  const container = document.querySelector('.benifits');
 
-  navigation: {
-    nextEl: '.reviews__slider-next',
-    prevEl: '.reviews__slider-prev',
-  },
-
-  // Responsive breakpoints
-  breakpoints: {
-
-    // when window width is >= 480px
-    767: {
-      slidesPerView: 2,
-      spaceBetween: 20
-    },
-    // when window width is >= 640px
-    1025: {
-      slidesPerView: "auto",
-      spaceBetween: 40
-    }
+  if (!container) {
+    return null
   }
 
-});
+  if (window.matchMedia("(max-width: 767px)").matches) {
+    const swiper2 = new Swiper('.benifits-api__slider', {
+      // Optional parameters
+      // direction: 'vertical',
+      spaceBetween: 10,
+      loop: false,
+
+      // If we need pagination
+      pagination: {
+        el: '.benifits-api__slider-pagination',
+      },
+
+    });
+  }
+
+}
+benefitsSlider();
+
+function possibilitySlider() {
+  const container = document.querySelector('.possibility');
+
+  if (!container) {
+    return null
+  }
+
+
+  if (window.matchMedia("(max-width: 767px)").matches) {
+
+    const swiper3 = new Swiper('.possibility-main__slider', {
+      // Optional parameters
+      // direction: 'vertical',
+      spaceBetween: 10,
+      loop: false,
+
+      // If we need pagination
+      pagination: {
+        el: '.possibility-main__slider-pagination',
+      },
+
+    });
+
+    const swiper4 = new Swiper('.possibility-secondary__slider', {
+      // Optional parameters
+      // direction: 'vertical',
+      spaceBetween: 10,
+      loop: false,
+
+      // If we need pagination
+      pagination: {
+        el: '.possibility-secondary__slider-pagination',
+      },
+
+    });
+
+  }
+}
+possibilitySlider();
+
+
+function reviewsSlider() {
+  const container = document.querySelector('.reviews');
+
+  if (!container) {
+    return null
+  }
+
+  const swiper5 = new Swiper('.reviews__slider', {
+    // Optional parameters
+    slidesPerView: 1,
+
+    navigation: {
+      nextEl: '.reviews__slider-next',
+      prevEl: '.reviews__slider-prev',
+    },
+
+    // Responsive breakpoints
+    breakpoints: {
+
+      // when window width is >= 480px
+      767: {
+        slidesPerView: 2,
+        spaceBetween: 20
+      },
+      // when window width is >= 640px
+      1025: {
+        slidesPerView: "auto",
+        spaceBetween: 40
+      }
+    }
+
+  });
+}
+
+reviewsSlider()
+
+function monitoringSlider() {
+  const container = document.querySelector('.monitoring-price');
+
+  if (!container) {
+    return null
+  }
+
+
+  if (window.matchMedia("(max-width: 767px)").matches) {
+
+    const swiper3 = new Swiper('.monitoring-price__advatages-slider', {
+      // Optional parameters
+      // direction: 'vertical',
+      spaceBetween: 10,
+      loop: false,
+
+      // If we need pagination
+      pagination: {
+        el: '.monitoring-price__advatages-slider-pagination',
+      },
+
+    });
+
+
+  }
+}
+monitoringSlider();

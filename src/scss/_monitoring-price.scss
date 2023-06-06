@@ -1,0 +1,196 @@
+.monitoring-price {
+  padding-top: 60px;
+  margin-bottom: 120px;
+
+  @media (max-width: $breakpoint992) {
+    padding-top: 40px;
+    margin-bottom: 80px;
+  }
+
+
+  @media (max-width: $breakpoint768) {
+    padding-top: 30px;
+    margin-bottom: 60px;
+  }
+
+
+  // .monitoring-price__inner
+
+  &__inner {}
+
+  // .monitoring-price__info
+
+  &__info {
+    margin-bottom: 95px;
+
+    @media (max-width: $breakpoint992) {
+      margin-bottom: 70px;
+
+      .monitoring-price__title {
+        margin-bottom: 20px;
+      }
+    }
+
+    @media (max-width: $breakpoint768) {
+      margin-bottom: 50px;
+    }
+
+
+  }
+
+  // .monitoring-price__title
+
+  &__title {
+    margin-bottom: 40px;
+  }
+
+  // .monitoring-price__info-list
+
+  &__info-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 100px;
+    row-gap: 44px;
+
+    @media (max-width: $breakpoint992) {
+      column-gap: 40px;
+      row-gap: 30px;
+    }
+
+    @media (max-width: $breakpoint768) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+
+  }
+
+  // .monitoring-price__info-item
+
+  &__info-item {}
+
+  // .monitoring-price__info-label
+
+  &__info-label {
+    margin-bottom: 15px;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+
+    @media (max-width: $breakpoint992) {
+      margin-bottom: 10px;
+      font-size: 16px;
+      line-height: 20px;
+    }
+
+  }
+
+  // .monitoring-price__info-descr
+
+  &__info-descr {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+
+    @media (max-width: $breakpoint992) {
+      font-size: 16px;
+      line-height: 20px;
+    }
+
+  }
+
+  // .monitoring-price__advatages
+
+  &__advatages {}
+
+  // .monitoring-price__advatages-list
+
+  &__advatages-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 40px;
+
+    @media (max-width: $breakpoint992) {
+      column-gap: 20px;
+    }
+
+    @media (max-width: $breakpoint768) {
+      display: flex;
+      column-gap: 0;
+    }
+
+  }
+
+  // .monitoring-price__advatages-item
+
+  &__advatages-item {
+    display: grid;
+  }
+
+  // .monitoring-price__advatages-img
+
+  &__advatages-img {
+    width: 98px;
+    height: 98px;
+    margin-bottom: 15px;
+    border-radius: 100%;
+    background-color: #D9D9D9;
+
+    @media (max-width: $breakpoint992) {
+      width: 60px;
+      height: 60px;
+    }
+
+    @media (max-width: $breakpoint768) {
+      justify-self: center;
+    }
+
+  }
+
+  // .monitoring-price__advatages-label
+
+  &__advatages-label {
+    margin-bottom: 15px;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+
+    @media (max-width: $breakpoint992) {
+      margin-bottom: 10px;
+      font-size: 16px;
+      line-height: 20px;
+    }
+
+  }
+
+  // .monitoring-price__advatages-descr
+
+  &__advatages-descr {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+
+    @media (max-width: $breakpoint992) {
+      font-size: 16px;
+      line-height: 20px;
+    }
+
+  }
+}
+
+.monitoring-price__advatages-slider {
+  .swiper-pagination-bullet {
+    width: 13px;
+    height: 13px;
+    border: 1px solid var(--second-color);
+    background-color: transparent;
+    opacity: 1;
+  }
+
+  .swiper-pagination-bullet-active {
+    background-color: var(--second-color);
+  }
+}
+
+.monitoring-price__advatages-slider-pagination {
+  position: static;
+  margin-top: 20px;
+}

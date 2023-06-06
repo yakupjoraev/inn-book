@@ -1,0 +1,260 @@
+.possibility {
+
+  // .possibility__inner
+
+  &__inner {}
+
+  // .possibility__main
+
+  &__main {
+    margin-bottom: 120px;
+
+    @media (max-width: $breakpoint768) {
+      margin-bottom: 60px;
+    }
+
+
+    &-title {
+      margin-bottom: 50px;
+
+      @media (max-width: $breakpoint768) {
+        margin-bottom: 25px;
+      }
+
+    }
+  }
+
+  // .possibility__main-slider
+
+  &__main-slider {}
+
+  // .possibility__secondary
+
+  &__secondary {
+    position: relative;
+    margin-bottom: 120px;
+
+    @media (max-width: $breakpoint768) {
+      margin-bottom: 60px;
+    }
+
+
+    &::before {
+      content: '';
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 540px;
+      height: 540px;
+      background-image: url('../img/possibility/possibility-secondary/possibility-secondary-bg.png');
+      background-repeat: no-repeat;
+      background-position: right 0;
+
+      @media (max-width: $breakpoint1450) {
+        background: none;
+      }
+    }
+
+    &-title {
+      margin-bottom: 50px;
+
+      @media (max-width: $breakpoint768) {
+        margin-bottom: 25px;
+      }
+
+    }
+  }
+
+  // .possibility__secondary-slider
+
+  &__secondary-slider {}
+}
+
+
+.possibility-main {
+
+
+
+  // .possibility-main__slider
+
+  &__slider {
+
+    .swiper-pagination-bullet {
+      width: 13px;
+      height: 13px;
+      border: 1px solid var(--second-color);
+      background-color: transparent;
+      opacity: 1;
+    }
+
+    .swiper-pagination-bullet-active {
+      background-color: var(--second-color);
+    }
+  }
+
+  &__slider-pagination {
+    position: static;
+    margin-top: 20px;
+  }
+
+  // .possibility-main__slider-wrapper
+
+  &__slider-wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 12px;
+    row-gap: 40px;
+
+    @media (max-width: $breakpoint992) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (max-width: $breakpoint768) {
+      display: flex;
+      column-gap: 0;
+      row-gap: 0;
+    }
+  }
+
+  // .possibility-main__slide
+
+  &__slide {
+    display: grid;
+    row-gap: 8px;
+    padding: 15px 12px;
+    background-color: var(--white-color);
+    border-radius: 20px;
+  }
+
+  // .possibility-main__slide-img
+
+  &__slide-img {
+
+    @media (max-width: $breakpoint768) {
+      justify-self: center;
+    }
+  }
+
+  // .possibility-main__slide-title
+
+  &__slide-title {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+
+    @media (max-width: $breakpoint768) {
+      font-size: 18px;
+      line-height: 20px;
+    }
+  }
+
+  // .possibility-main__slide-descr
+
+  &__slide-descr {}
+
+  // .possibility-main__slide-link
+
+  &__slide-link {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    color: var(--main-color);
+  }
+}
+
+.possibility-secondary {
+
+
+  // .possibility-secondary__slider
+
+  &__slider {
+    padding-right: 240px;
+
+    @media (max-width: $breakpoint1450) {
+      padding-right: 0;
+    }
+
+    .swiper-pagination-bullet {
+      width: 13px;
+      height: 13px;
+      border: 1px solid var(--main-color);
+      background-color: transparent;
+      opacity: 1;
+    }
+
+    .swiper-pagination-bullet-active {
+      background-color: var(--main-color);
+    }
+  }
+
+  &__slider-pagination {
+    position: static;
+    margin-top: 20px;
+  }
+
+  // .possibility-secondary__slider-wrapper
+
+  &__slider-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 40px;
+    row-gap: 40px;
+
+    @media (max-width: $breakpoint768) {
+      display: flex;
+      column-gap: 0;
+      row-gap: 0;
+    }
+
+  }
+
+  // .possibility-secondary__slide
+
+  &__slide {
+    display: grid;
+    grid-template-columns: 70px 1fr;
+    column-gap: 15px;
+
+    @media (max-width: $breakpoint768) {
+      grid-template-columns: repeat(1, 1fr);
+      row-gap: 10px;
+      padding: 24px 15px;
+      background-color: var(--white-color);
+      border-radius: 20px;
+    }
+
+  }
+
+  // .possibility-secondary__slide-img
+
+  &__slide-img {
+
+    @media (max-width: $breakpoint768) {
+      justify-self: center;
+    }
+
+  }
+
+  // .possibility-secondary__slide-info
+
+  &__slide-info {}
+
+  // .possibility-secondary__slide-title
+
+  &__slide-title {
+    margin-bottom: 8px;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+
+    @media (max-width: $breakpoint768) {
+      font-size: 18px;
+      line-height: 22px;
+
+    }
+
+  }
+
+  // .possibility-secondary__slide-descr
+
+  &__slide-descr {}
+}

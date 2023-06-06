@@ -110,4 +110,30 @@ if (window.matchMedia("(max-width: 767px)").matches) {
 
   });
 
+  const swiper3 = new Swiper('.possibility-main__slider', {
+    // Optional parameters
+    // direction: 'vertical',
+    spaceBetween: 10,
+    loop: false,
+
+    // If we need pagination
+    pagination: {
+      el: '.possibility-main__slider-pagination',
+    },
+
+  });
+
+  const swiper4 = new Swiper('.possibility-secondary__slider', {
+    // Optional parameters
+    // direction: 'vertical',
+    spaceBetween: 10,
+    loop: false,
+
+    // If we need pagination
+    pagination: {
+      el: '.possibility-secondary__slider-pagination',
+    },
+
+  });
+
 }

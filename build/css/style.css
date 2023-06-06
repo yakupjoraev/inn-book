@@ -229,7 +229,7 @@ html {
 .menu__item-link--yellow {
   padding: 6px 16px;
   background-color: var(--second-color);
-  border-radius: 8px;
+  border-radius: 4px;
 }
 
 .burger {
@@ -523,6 +523,126 @@ html {
   max-width: 100%;
 }
 
+.possibility__main {
+  margin-bottom: 120px;
+}
+
+.possibility__main-title {
+  margin-bottom: 50px;
+}
+
+.possibility__secondary {
+  position: relative;
+  margin-bottom: 120px;
+}
+
+.possibility__secondary::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 540px;
+  height: 540px;
+  background-image: url("../img/possibility/possibility-secondary/possibility-secondary-bg.png");
+  background-repeat: no-repeat;
+  background-position: right 0;
+}
+
+.possibility__secondary-title {
+  margin-bottom: 50px;
+}
+
+.possibility-main__slider .swiper-pagination-bullet {
+  width: 13px;
+  height: 13px;
+  border: 1px solid var(--second-color);
+  background-color: transparent;
+  opacity: 1;
+}
+
+.possibility-main__slider .swiper-pagination-bullet-active {
+  background-color: var(--second-color);
+}
+
+.possibility-main__slider-pagination {
+  position: static;
+  margin-top: 20px;
+}
+
+.possibility-main__slider-wrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  -webkit-column-gap: 12px;
+     -moz-column-gap: 12px;
+          column-gap: 12px;
+  row-gap: 40px;
+}
+
+.possibility-main__slide {
+  display: grid;
+  row-gap: 8px;
+  padding: 15px 12px;
+  background-color: var(--white-color);
+  border-radius: 20px;
+}
+
+.possibility-main__slide-title {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.possibility-main__slide-link {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  color: var(--main-color);
+}
+
+.possibility-secondary__slider {
+  padding-right: 240px;
+}
+
+.possibility-secondary__slider .swiper-pagination-bullet {
+  width: 13px;
+  height: 13px;
+  border: 1px solid var(--main-color);
+  background-color: transparent;
+  opacity: 1;
+}
+
+.possibility-secondary__slider .swiper-pagination-bullet-active {
+  background-color: var(--main-color);
+}
+
+.possibility-secondary__slider-pagination {
+  position: static;
+  margin-top: 20px;
+}
+
+.possibility-secondary__slider-wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  -webkit-column-gap: 40px;
+     -moz-column-gap: 40px;
+          column-gap: 40px;
+  row-gap: 40px;
+}
+
+.possibility-secondary__slide {
+  display: grid;
+  grid-template-columns: 70px 1fr;
+  -webkit-column-gap: 15px;
+     -moz-column-gap: 15px;
+          column-gap: 15px;
+}
+
+.possibility-secondary__slide-title {
+  margin-bottom: 8px;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+}
+
 .footer {
   padding: 36px 0;
   background-color: var(--main-color);
@@ -606,6 +726,14 @@ html {
   .container {
     max-width: 1200px;
   }
+
+  .possibility__secondary::before {
+    background: none;
+  }
+
+  .possibility-secondary__slider {
+    padding-right: 0;
+  }
 }
 
 @media (max-width: 991.98px) {
@@ -667,6 +795,10 @@ html {
   }
 
   .benifits-programms__list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .possibility-main__slider-wrapper {
     grid-template-columns: repeat(2, 1fr);
   }
 
@@ -899,6 +1031,10 @@ html {
     line-height: 29px;
   }
 
+  .benifits-programms {
+    margin-bottom: 80px;
+  }
+
   .benifits-programms__list {
     grid-template-columns: repeat(1, 1fr);
     row-gap: 20px;
@@ -926,6 +1062,12 @@ html {
             flex-direction: column-reverse;
   }
 
+  .benifits-crm__info {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 auto;
+            flex: 0 1 auto;
+  }
+
   .benifits-crm__info .benifits__title {
     display: none;
   }
@@ -949,6 +1091,68 @@ html {
 
   .benifits-crm__img {
     height: 300px;
+  }
+
+  .possibility__main {
+    margin-bottom: 60px;
+  }
+
+  .possibility__main-title {
+    margin-bottom: 25px;
+  }
+
+  .possibility__secondary {
+    margin-bottom: 60px;
+  }
+
+  .possibility__secondary-title {
+    margin-bottom: 25px;
+  }
+
+  .possibility-main__slider-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-column-gap: 0;
+       -moz-column-gap: 0;
+            column-gap: 0;
+    row-gap: 0;
+  }
+
+  .possibility-main__slide-img {
+    justify-self: center;
+  }
+
+  .possibility-main__slide-title {
+    font-size: 18px;
+    line-height: 20px;
+  }
+
+  .possibility-secondary__slider-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-column-gap: 0;
+       -moz-column-gap: 0;
+            column-gap: 0;
+    row-gap: 0;
+  }
+
+  .possibility-secondary__slide {
+    grid-template-columns: repeat(1, 1fr);
+    row-gap: 10px;
+    padding: 24px 15px;
+    background-color: var(--white-color);
+    border-radius: 20px;
+  }
+
+  .possibility-secondary__slide-img {
+    justify-self: center;
+  }
+
+  .possibility-secondary__slide-title {
+    font-size: 18px;
+    line-height: 22px;
   }
 }
 

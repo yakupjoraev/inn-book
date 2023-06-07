@@ -1,0 +1,138 @@
+.functions {
+  padding-top: 100px;
+  margin-bottom: 120px;
+
+  @media (max-width: $breakpoint992) {
+    padding-top: 40px;
+    margin-bottom: 80px;
+  }
+
+
+  @media (max-width: $breakpoint768) {
+    padding-top: 30px;
+    margin-bottom: 60px;
+  }
+
+
+  // .functions__inner
+
+  &__inner {}
+
+  // .functions__title
+
+  &__title {
+    text-align: left;
+    margin-bottom: 50px;
+
+    @media (max-width: $breakpoint768) {
+      margin-bottom: 30px;
+    }
+  }
+
+  // .functions__block
+
+  &__block {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 40px;
+    margin-bottom: 50px;
+
+    @media (max-width: $breakpoint992) {
+      flex-direction: column;
+      row-gap: 40px;
+    }
+
+    @media (max-width: $breakpoint768) {
+      row-gap: 20px;
+    }
+  }
+
+  // .functions__info
+
+  &__info {}
+
+  // .functions__info-title
+
+  &__info-title {
+    margin-bottom: 20px;
+    font-weight: 600;
+    font-size: 25px;
+    line-height: 30px;
+
+    @media (max-width: $breakpoint768) {
+      font-size: 20px;
+      line-height: 24px;
+    }
+  }
+
+  // .functions__descr
+
+  &__descr {}
+
+  // .functions__picture
+
+  &__picture {}
+
+  // .functions__pic
+
+  &__pic {
+    @media (max-width: $breakpoint768) {
+      max-width: 100%;
+      width: 100%;
+    }
+  }
+
+  // .functions__adventages
+
+  &__adventages {
+    &:not(:last-child) {
+      margin-bottom: 60px;
+
+      @media (max-width: $breakpoint768) {
+        margin-bottom: 30px;
+      }
+    }
+  }
+
+  // .functions__advantages-title
+
+  &__advantages-title {
+    margin-bottom: 40px;
+    font-weight: 600;
+    font-size: 25px;
+    line-height: 30px;
+
+    @media (max-width: $breakpoint768) {
+      font-size: 20px;
+      line-height: 24px;
+    }
+  }
+
+  // .functions__adventages-list
+
+  &__adventages-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 40px;
+    row-gap: 40px;
+
+    @media (max-width: $breakpoint992) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (max-width: $breakpoint768) {
+      grid-template-columns: repeat(1, 1fr);
+      row-gap: 20px;
+    }
+
+  }
+
+  // .functions__adventages-item
+
+  &__adventages-item {
+    height: 172px;
+    background-color: #F0F0F0;
+    border-radius: 10px;
+  }
+}

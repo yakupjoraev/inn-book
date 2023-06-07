@@ -1,0 +1,209 @@
+.crm-info {
+  padding-top: 60px;
+  margin-bottom: 120px;
+
+  @media (max-width: $breakpoint992) {
+    padding-top: 40px;
+    margin-bottom: 80px;
+  }
+
+
+  @media (max-width: $breakpoint768) {
+    padding-top: 30px;
+    margin-bottom: 60px;
+  }
+
+  // .crm-info__inner
+
+  &__inner {}
+
+  // .crm-info__top
+
+  &__top {
+    max-width: 860px;
+    margin: 0 auto 146px;
+
+    @media (max-width: $breakpoint992) {
+      margin-bottom: 80px;
+    }
+
+    @media (max-width: $breakpoint768) {
+      margin-bottom: 50px;
+    }
+  }
+
+  // .crm-info__title
+
+  &__title {
+    margin-bottom: 40px;
+
+    @media (max-width: $breakpoint768) {
+      margin-bottom: 20px;
+    }
+  }
+
+  // .crm-info__top-list
+
+  &__top-list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 40px;
+
+    @media (max-width: $breakpoint768) {
+      row-gap: 20px;
+    }
+  }
+
+  // .crm-info__top-item
+
+  &__top-item {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    color: var(--main-color);
+
+    @media (max-width: $breakpoint768) {
+      font-size: 18px;
+      line-height: 22px;
+    }
+  }
+
+  // .crm-info__middle
+
+  &__middle {
+    margin-bottom: 146px;
+
+    @media (max-width: $breakpoint992) {
+      margin-bottom: 80px;
+    }
+
+    @media (max-width: $breakpoint768) {
+      margin-bottom: 50px;
+    }
+  }
+
+  // .crm-info__middle-list
+
+  &__middle-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 50px;
+    column-gap: 20px;
+
+    @media (max-width: $breakpoint768) {
+      grid-template-columns: repeat(1, 1fr);
+      row-gap: 10px;
+    }
+  }
+
+  // .crm-info__middle-item
+
+  &__middle-item {
+    display: grid;
+    row-gap: 10px;
+    justify-items: center;
+
+    @media (max-width: $breakpoint768) {
+      grid-auto-flow: column;
+      justify-content: flex-start;
+      align-items: center;
+      column-gap: 10px;
+    }
+  }
+
+  // .crm-info__middle-img
+
+  &__middle-img {
+    justify-self: center;
+    width: 98px;
+    height: 98px;
+    border-radius: 100px;
+    background-color: #D9D9D9;
+
+    @media (max-width: $breakpoint768) {
+      width: 60px;
+      height: 60px;
+    }
+  }
+
+  // .crm-info__middle-label
+
+  &__middle-label {
+    text-align: center;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+
+    @media (max-width: $breakpoint768) {
+      text-align: left;
+      font-size: 16px;
+      line-height: 20px;
+    }
+  }
+
+  // .crm-info__bottom
+
+  &__bottom {}
+
+  // .crm-info__advantages
+
+  &__advantages {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    justify-items: center;
+    column-gap: 120px;
+    row-gap: 68px;
+    max-width: 800px;
+    margin: 0 auto;
+
+    margin-bottom: 146px;
+
+    @media (max-width: $breakpoint992) {
+      margin-bottom: 80px;
+    }
+
+    @media (max-width: $breakpoint768) {
+      grid-template-columns: repeat(1, 1fr);
+      row-gap: 30px;
+      margin-bottom: 50px;
+    }
+  }
+
+  // .crm-info__advantages-descr
+
+  &__advantages-descr {
+    max-width: 305px;
+    text-align: center;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  // .crm-info__prices
+
+  &__prices {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    justify-content: center;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  // .crm-info__prices-descr
+
+  &__prices-descr {
+    text-align: left;
+    font-weight: 600;
+    font-size: 26px;
+    line-height: 140%;
+
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+
+    @media (max-width: $breakpoint768) {
+      font-size: 16px;
+    }
+  }
+}

@@ -47,6 +47,14 @@ html {
   justify-content: space-between;
 }
 
+.main__body--body {
+  background-color: var(--white-color);
+}
+
+.main__body--blue {
+  background-color: #DCE5FF;
+}
+
 .main {
   flex: 1 1 auto;
 }

@@ -145,11 +145,31 @@
 
 .hero-monitoring {
 
+  .hero__slide {
+    align-items: center;
+  }
+
+  .hero__title {
+    font-size: 35px;
+    line-height: 43px;
+  }
+
   @media (max-width: $breakpoint768) {
     .hero__title {
       text-align: center;
       font-size: 28px;
       line-height: 34px;
     }
+  }
+}
+
+.hero-crm {
+
+  .hero__slide {
+    align-items: center;
+  }
+
+  .hero__slide-text {
+    max-width: 400px;
   }
 }

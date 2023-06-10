@@ -336,35 +336,8 @@ if (form) {
   console.log("Элемент формы не найден");
 }
 
-function inputMask1() {
-  // Получаем поле телефона
-  var phoneInput = document.querySelector('input.form-data__input');
 
-  // Проверяем, что поле телефона существует
-  if (phoneInput) {
-    // Функция для применения маски к полю телефона
-    function applyPhoneMask(input) {
-      // Удаление всех символов, кроме цифр
-      var cleanedValue = input.value.replace(/\D/g, '');
 
-      // Добавление пробелов в маску
-      var formattedValue = cleanedValue.slice(0, 3) + ' ' + cleanedValue.slice(3, 5) + ' ' +
-        cleanedValue.slice(5, 7);
-
-      // Применение отформатированного значения обратно к полю ввода
-      input.value = formattedValue;
-    }
-
-    // Добавляем обработчик события ввода
-    phoneInput.addEventListener('input', function () {
-      applyPhoneMask(this);
-    });
-  } else {
-    console.log("Поле телефона не найдено");
-  }
-}
-
-inputMask1();
 
 function inputMask2() {
   // Получаем поле ввода с классом "form__input" и типом "tel"
@@ -424,6 +397,36 @@ function inputMask2() {
 
 inputMask2();
 
+function inputMask1() {
+  // Получаем поле телефона
+  var phoneInput = document.querySelector('[data-form-tel]');
+
+  // Проверяем, что поле телефона существует
+  if (phoneInput) {
+    // Функция для применения маски к полю телефона
+    function applyPhoneMask(input) {
+      // Удаление всех символов, кроме цифр
+      var cleanedValue = input.value.replace(/\D/g, '');
+
+      // Добавление пробелов в маску
+      var formattedValue = cleanedValue.slice(0, 3) + ' ' + cleanedValue.slice(3, 5) + ' ' +
+        cleanedValue.slice(5, 7);
+
+      // Применение отформатированного значения обратно к полю ввода
+      input.value = formattedValue;
+    }
+
+    // Добавляем обработчик события ввода
+    phoneInput.addEventListener('input', function () {
+      applyPhoneMask(this);
+    });
+  } else {
+    console.log("Поле телефона не найдено");
+  }
+}
+
+inputMask1();
+console.log(inputMask1());
 
 
 function instructionsList() {

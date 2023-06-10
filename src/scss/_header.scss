@@ -23,7 +23,7 @@
   row-gap: 40px;
   left: -100%;
   bottom: 0;
-  height: calc(100vh - 84px);
+  height: calc(100vh - 83px);
   width: 100vw;
 
   opacity: 0;
@@ -126,7 +126,8 @@
   }
 
   .menu__service:nth-child(2) {
-    flex: 0 1 600px;
+    // flex: 0 1 600px;
+    width: 70%;
     display: flex;
     flex-direction: column;
     min-width: 600px;
@@ -150,9 +151,15 @@
       line-height: 24px;
       color: var(--main-color);
 
+      transition: color 0.2s linear;
+
       @media (max-width: $breakpoint1450) {
         font-size: 18px;
         line-height: 20px;
+      }
+
+      &:hover {
+        color: var(--second-color);
       }
 
     }

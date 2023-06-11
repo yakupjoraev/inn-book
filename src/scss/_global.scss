@@ -57,6 +57,10 @@ html {
 
 .main__body--grey {
   background-color: #f0f0f0;
+
+  @media (max-width: $breakpoint992) {
+    background-color: var(--white-color);
+  }
 }
 
 

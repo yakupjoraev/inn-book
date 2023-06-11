@@ -87,7 +87,7 @@
 .methods {
 
   &__list {
-    flex: 0 1 420px;
+    flex: 0 0 420px;
     padding: 30px 60px;
     background-color: var(--white-color);
     border-radius: 3px;
@@ -97,6 +97,10 @@
       width: 100%;
       padding: 0;
       background-color: transparent;
+
+      .instructions-list__list {
+        background-color: var(--white-color);
+      }
     }
   }
 
@@ -133,7 +137,7 @@
   // .methods__content
 
   &__content {
-    flex: 0 1 860px;
+    // flex: 0 1 860px;
     padding: 30px 40px;
     border-radius: 3px;
     background-color: var(--white-color);

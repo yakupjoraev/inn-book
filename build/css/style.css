@@ -1379,7 +1379,7 @@ html {
 .functions__adventages-item {
   height: 172px;
   background-color: #F0F0F0;
-  border-radius: 10px;
+  border-radius: 4px;
 }
 
 .reviews-page {
@@ -1690,6 +1690,121 @@ html {
   height: 50px;
 }
 
+.form-group {
+  position: relative;
+}
+
+.form-eye {
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  background-color: transparent;
+}
+
+.form-eye img {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  pointer-events: none;
+}
+
+.select {
+  width: 58px;
+  position: relative;
+  z-index: 10;
+}
+
+.select__backdrop {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: transparent;
+  z-index: -1;
+  display: none;
+}
+
+.select.open .select__dropdown {
+  display: block;
+}
+
+.select.open .select__input {
+  border-bottom: none;
+}
+
+.select.open .select__backdrop {
+  display: block;
+}
+
+.select__input {
+  width: 58px;
+  padding: 17px 20px 15px;
+  background-color: #f0f0f0;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 140%;
+  outline-color: var(--second-color);
+  -webkit-transition: border 0.2s linear;
+  -o-transition: border 0.2s linear;
+  transition: border 0.2s linear;
+  cursor: pointer;
+}
+
+.select__input .select__arrow {
+  display: none;
+  pointer-events: none;
+  width: 15px;
+}
+
+.select__input .select__arrow.open {
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.select__input span {
+  pointer-events: none;
+}
+
+.select__dropdown {
+  display: none;
+  position: absolute;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  top: 54px;
+  left: 0;
+  right: 0;
+  max-height: 200px;
+  overflow-y: auto;
+  background-color: var(--white-color);
+}
+
+.select__dropdown .select__list .select__item {
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+  cursor: pointer;
+}
+
+.select__dropdown .select__list .select__item.selected {
+  background-color: var(--second-color);
+  color: var(--white-color);
+}
+
+.select__dropdown .select__list .select__item:hover {
+  background-color: var(--second-color);
+  color: var(--white-color);
+  -webkit-transition: 0.15 background-color ease-in;
+  -o-transition: 0.15 background-color ease-in;
+  transition: 0.15 background-color ease-in;
+}
+
 .form-data__political {
   max-width: 230px;
   margin: 10px auto;
@@ -1765,7 +1880,7 @@ html {
   width: 100%;
   margin-bottom: 25px;
   border: 1px solid var(--main-color);
-  border-radius: 10px;
+  border-radius: 4px;
   font-size: 16px;
   outline-color: var(--second-color);
 }
@@ -2257,8 +2372,8 @@ html {
 
 .methods__list {
   -webkit-box-flex: 0;
-      -ms-flex: 0 1 420px;
-          flex: 0 1 420px;
+      -ms-flex: 0 0 420px;
+          flex: 0 0 420px;
   padding: 30px 60px;
   background-color: var(--white-color);
   border-radius: 3px;
@@ -2295,9 +2410,6 @@ html {
 }
 
 .methods__content {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 1 860px;
-          flex: 0 1 860px;
   padding: 30px 40px;
   border-radius: 3px;
   background-color: var(--white-color);
@@ -2570,6 +2682,10 @@ html {
 @media (max-width: 991.98px) {
   .container {
     max-width: 970px;
+  }
+
+  .main__body--grey {
+    background-color: var(--white-color);
   }
 
   .main {
@@ -3029,6 +3145,10 @@ html {
     width: 100%;
     padding: 0;
     background-color: transparent;
+  }
+
+  .methods__list .instructions-list__list {
+    background-color: var(--white-color);
   }
 
   .methods__main {

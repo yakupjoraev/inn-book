@@ -33,16 +33,21 @@
         </div>
 
         <div class="form-data__main">
-          <div class="form-data__group">
-            <div class="form-data__input form-data__input--static">
-              +7
+          <div class="form-data__group form-group">
+
+            <div id="select">
+              <input type="hidden" class="hidden__input">
             </div>
 
-            <input class="form-data__input" type="tel" data-form-tel>
+            <input class="form-data__input" type="tel">
           </div>
 
-          <div class="form-data__group">
-            <input class="form-data__input" type="password" placeholder="Введите пароль" />
+          <div class="form-data__group form-group">
+            <input class="form-data__input form-input" type="password" placeholder="Введите пароль" />
+
+            <button class="form-eye" type="button">
+              <img src="./img/eye-close.svg" alt="не видно">
+            </button>
           </div>
 
           <a class="form-data__forget" href="#">Забыли пароль?</a>

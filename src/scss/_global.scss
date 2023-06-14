@@ -130,6 +130,28 @@ html {
   margin: 0 auto;
 }
 
+.container--fuul {
+  max-width: 100%;
+  padding: 0 66px;
+  margin: 0 auto;
+
+  @media (max-width: $breakpoint1450) {
+    padding: 0 40px;
+  }
+
+  @media (max-width: $breakpoint992) {
+    padding: 0 30px;
+  }
+
+  @media (max-width: $breakpoint768) {
+    padding: 0 20px;
+  }
+
+  @media (max-width: $breakpoint480) {
+    padding: 0 16px;
+  }
+}
+
 // Animations
 // Fade
 @keyframes fade {

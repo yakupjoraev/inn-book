@@ -248,3 +248,12 @@
   display: flex;
   cursor: pointer;
 }
+
+
+.price__item {
+  display: none;
+}
+
+.price__item.active {
+  display: grid;
+}

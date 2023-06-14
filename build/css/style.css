@@ -216,6 +216,12 @@ html {
   margin: 0 auto;
 }
 
+.container--fuul {
+  max-width: 100%;
+  padding: 0 66px;
+  margin: 0 auto;
+}
+
 @-webkit-keyframes fade {
   0% {
     opacity: 0;
@@ -261,8 +267,10 @@ html {
           align-items: flex-start;
   row-gap: 40px;
   left: -100%;
-  bottom: 0;
-  height: calc(100vh - 83px);
+  top: 83px;
+  max-height: 620px;
+  height: 100%;
+  overflow-y: auto;
   width: 100vw;
   opacity: 0;
   pointer-events: none;
@@ -503,6 +511,30 @@ html {
 
 .arrow {
   min-width: 16px;
+}
+
+.menu__services-close {
+  position: absolute;
+  top: 0;
+  right: 50px;
+  width: 70px;
+  height: 70px;
+  cursor: pointer;
+}
+
+.menu__services-close svg {
+  width: 100%;
+  height: 100%;
+}
+
+.menu__services-close svg path {
+  -webkit-transition: stroke 0.2s linear;
+  -o-transition: stroke 0.2s linear;
+  transition: stroke 0.2s linear;
+}
+
+.menu__services-close:hover svg path {
+  stroke: var(--second-color);
 }
 
 .hero {
@@ -888,6 +920,8 @@ html {
 
 .included__step {
   display: grid;
+  -ms-flex-line-pack: justify;
+      align-content: space-between;
   height: 100%;
   row-gap: 10px;
   padding: 30px;
@@ -1047,6 +1081,14 @@ html {
   display: -ms-flexbox;
   display: flex;
   cursor: pointer;
+}
+
+.price__item {
+  display: none;
+}
+
+.price__item.active {
+  display: grid;
 }
 
 .reviews {
@@ -2269,12 +2311,15 @@ html {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   -webkit-column-gap: 60px;
      -moz-column-gap: 60px;
           column-gap: 60px;
+}
+
+.instructions__list {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 420px;
+          flex: 0 0 420px;
 }
 
 .content-default__list {
@@ -2305,12 +2350,6 @@ html {
   font-weight: 600;
   font-size: 16px;
   color: var(--main-color);
-}
-
-.content-detal {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 1 600px;
-          flex: 0 1 600px;
 }
 
 .content-detal__title {
@@ -2600,6 +2639,10 @@ html {
     max-width: 1200px;
   }
 
+  .container--fuul {
+    padding: 0 40px;
+  }
+
   .menu__services .menu__service:nth-child(1) {
     grid-template-columns: repeat(2, 250px);
     row-gap: 20px;
@@ -2630,6 +2673,13 @@ html {
   .menu__services .menu__service:nth-child(2) .menu__sublist-link {
     font-size: 18px;
     line-height: 20px;
+  }
+
+  .menu__services-close {
+    right: 0;
+    top: -10px;
+    width: 70px;
+    height: 70px;
   }
 
   .possibility__secondary::before {
@@ -2690,6 +2740,10 @@ html {
 
   .main {
     margin-top: 67px;
+  }
+
+  .container--fuul {
+    padding: 0 30px;
   }
 
   .menu__services {
@@ -3102,6 +3156,9 @@ html {
   }
 
   .instructions__list {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 100%;
+            flex: 0 1 100%;
     width: 100%;
   }
 
@@ -3379,6 +3436,10 @@ html {
   .main-title {
     font-size: 24px;
     line-height: 29px;
+  }
+
+  .container--fuul {
+    padding: 0 20px;
   }
 
   .hero__title {
@@ -3851,6 +3912,10 @@ html {
 @media (max-width: 479.98px) {
   .container {
     max-width: none;
+  }
+
+  .container--fuul {
+    padding: 0 16px;
   }
 
   .reviews__slide-stars span {

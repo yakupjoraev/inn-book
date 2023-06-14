@@ -516,12 +516,15 @@ instructionsList();
 
 
 function container() {
-  const container = document.querySelector('.services')
-  const body = document.querySelector('body')
+  const container = document.querySelector('.services');
+  const btn = document.querySelector('.menu__services-close')
+  // const body = document.querySelector('body')
 
   if (!container) {
     return null
   }
+
+
 
   var timeoutId; // переменная для хранения идентификатора таймера
 
@@ -529,7 +532,7 @@ function container() {
   function removeActiveClassWithDelay() {
     timeoutId = setTimeout(function () {
       container.classList.remove('show');
-      body.classList.remove('locked');
+      // body.classList.remove('locked');
     }, 500); // задержка в 0,5 секунды
   }
 
@@ -537,11 +540,19 @@ function container() {
   container.addEventListener('mouseover', function () {
     clearTimeout(timeoutId); // очистка таймера при наведении на элемент
     container.classList.add('show');
-    body.classList.add('locked');
+    // body.classList.add('locked');
   });
 
   // Добавление обработчика события при уходе курсора с "services"
   container.addEventListener('mouseout', removeActiveClassWithDelay);
+
+  if (btn) {
+    btn.addEventListener('click', () => {
+      container.classList.remove('show');
+    })
+  }
+
+
 }
 
 if (window.matchMedia("(min-width: 991px)").matches) {
@@ -712,5 +723,89 @@ if (select2) {
 
 
 
+function price() {
+  const container = document.querySelector('.price');
+
+  if (!container) {
+    return null
+  }
+
+  // Находим элементы плюса, минуса и стоимости
+  var plusButton = document.querySelector('.plus');
+  var minusButton = document.querySelector('.minus');
+  var priceElement = document.querySelector('.counter');
+  var priceCalcCount = document.querySelector('.counter-month');
+
+  // Устанавливаем начальное значение стоимости
+  var price = parseInt(priceElement.textContent); // Извлекаем только числовое значение из строки
+
+  // Функция обработки клика на плюс
+  plusButton.addEventListener('click', function () {
+    price += 1; // Увеличиваем значение стоимости на 1
+    updatePrice(); // Обновляем отображение стоимости
+  });
+
+  // Функция обработки клика на минус
+  minusButton.addEventListener('click', function () {
+    if (price >= 1) { // Проверяем, чтобы значение стоимости было больше или равно 1
+      price -= 1; // Уменьшаем значение стоимости на 1
+      updatePrice(); // Обновляем отображение стоимости
+    }
+  });
+
+  // Функция для обновления отображения стоимости
+  function updatePrice() {
+    priceElement.textContent = price; // Обновляем значение внутри .counter
+    priceCalcCount.textContent = formatPrice(price * 1000) + ' ₽'; // Обновляем значение внутри .counter-month с добавлением знака рубля
+  }
+
+  // Функция для форматирования числа в формат "X XXX"
+  function formatPrice(price) {
+    return price.toString().replace(/(\d)(?=(\d{3})+$)/g, '$1 ');
+  }
 
 
+}
+price();
+
+function priceList() {
+  const container = document.querySelector('.price');
+
+  if (!container) {
+    return null
+  }
+
+  // Получаем все кнопки плюс и минус
+  var plusButtons = document.querySelectorAll('.plus');
+  var minusButtons = document.querySelectorAll('.minus');
+
+  // Текущий индекс элемента
+  var currentIndex = 1;
+
+  // Добавляем обработчики событий для кнопок плюс
+  plusButtons.forEach(function (button) {
+    button.addEventListener('click', function () {
+      var priceItems = document.querySelectorAll('.price__item');
+
+      if (currentIndex < priceItems.length) {
+        priceItems[currentIndex].classList.add('active');
+        currentIndex++;
+      }
+    });
+  });
+
+  // Добавляем обработчики событий для кнопок минус
+  minusButtons.forEach(function (button) {
+    button.addEventListener('click', function () {
+      var priceItems = document.querySelectorAll('.price__item');
+
+      if (currentIndex > 0) {
+        currentIndex--;
+        priceItems[currentIndex].classList.remove('active');
+      }
+    });
+  });
+
+}
+
+priceList();

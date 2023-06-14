@@ -33,7 +33,7 @@
     position: relative;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    // justify-content: space-between;
     column-gap: 60px;
 
     @media (max-width: $breakpoint1450) {
@@ -50,7 +50,10 @@
   // .instructions__list
 
   &__list {
+    flex: 0 0 420px;
+
     @media (max-width: $breakpoint992) {
+      flex: 0 1 100%;
       width: 100%;
     }
   }

@@ -515,10 +515,10 @@ html {
 
 .menu__services-close {
   position: absolute;
-  top: 0;
-  right: 50px;
-  width: 70px;
-  height: 70px;
+  top: 10px;
+  right: 60px;
+  width: 40px;
+  height: 40px;
   cursor: pointer;
 }
 
@@ -2676,10 +2676,8 @@ html {
   }
 
   .menu__services-close {
-    right: 0;
-    top: -10px;
-    width: 70px;
-    height: 70px;
+    right: 30px;
+    top: 0;
   }
 
   .possibility__secondary::before {

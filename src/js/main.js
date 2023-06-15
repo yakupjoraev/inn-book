@@ -41,22 +41,8 @@ function burgerMenu() {
     }
   })
 }
-burgerMenu()
+burgerMenu();
 
-
-// Вызываем эту функцию, если нам нужно зафиксировать меню при скролле.
-function fixedNav() {
-  const nav = document.querySelector('nav')
-
-  // тут указываем в пикселях, сколько нужно проскроллить что бы наше меню стало фиксированным
-  const breakpoint = 1
-  if (window.scrollY >= breakpoint) {
-    nav.classList.add('fixed__nav')
-  } else {
-    nav.classList.remove('fixed__nav')
-  }
-}
-window.addEventListener('scroll', fixedNav)
 
 
 function subMenuList() {
@@ -436,10 +422,8 @@ function instructionsList() {
     return null;
   }
 
-  // Получаем все элементы с классом instructions-list__item-arrow
   const arrows = document.querySelectorAll('.instructions-list__item-arrow');
 
-  // Перебираем каждый элемент и добавляем обработчик клика
   arrows.forEach(arrow => {
     arrow.addEventListener('click', () => {
       const item = arrow.closest('.instructions-list__item');
@@ -447,66 +431,71 @@ function instructionsList() {
     });
   });
 
-  // Получаем все элементы с классами instructions-list__item-link и instructions-list__sublink
   const links = document.querySelectorAll('.instructions-list__item-link, .instructions-list__sublink');
+  const subItems = document.querySelectorAll('.instructions-list__subitem');
 
-  // Перебираем каждый элемент и добавляем обработчик клика
   links.forEach(link => {
-    link.addEventListener('click', () => {
+    link.addEventListener('click', (event) => {
+      const target = event.target;
+      const isSubItem = target.classList.contains('instructions-list__subitem');
+
+      if (isSubItem) {
+        target.classList.add('active');
+        return;
+      }
+
+      subItems.forEach(subItem => {
+        // subItem.classList.remove('active');
+      });
+
       const items = document.querySelectorAll('.instructions-list__item.active');
       items.forEach(item => {
-        item.classList.remove('active');
+        // item.classList.remove('active');
       });
     });
   });
 
+  subItems.forEach(subItem => {
+    subItem.addEventListener('click', () => {
+      // Удаление класса 'active' у всех subItem
+      subItems.forEach(item => {
+        item.classList.remove('active');
+      });
+
+      // Добавление класса 'active' на текущий subItem
+      subItem.classList.add('active');
+    });
+  });
+
+
   const burgerDefault = document.querySelector('[data-instructions-list-burger]');
   const burgerClose = document.querySelector('[data-instructions-list-burger-close]');
-  // const body = document.querySelector('body')
 
   burgerDefault.addEventListener('click', () => {
     container.classList.add('active');
-    // body.classList.add('locked')
   });
 
   burgerClose.addEventListener('click', () => {
     container.classList.remove('active');
-    // body.classList.remove('locked')
   });
 
-  // Добавляем обработчик клика на объект document
   document.addEventListener('click', (event) => {
     const target = event.target;
-
-    // Проверяем, является ли целевой элемент бургером или элементом списка инструкций
     const isBurger = target === burgerDefault || target === burgerClose;
     const isInstructionsItem = target.closest('.instructions-list') === container;
 
-    // Если целевой элемент не является бургером и не является элементом списка инструкций,
-    // то удаляем классы active у контейнера и элементов списка
     if (!isBurger && !isInstructionsItem) {
       container.classList.remove('active');
+
+      subItems.forEach(subItem => {
+        subItem.classList.remove('active');
+      });
 
       const items = document.querySelectorAll('.instructions-list__item.active');
       items.forEach(item => {
         item.classList.remove('active');
       });
     }
-  });
-
-
-  // Перебираем каждый элемент и добавляем обработчик клика
-  links.forEach(link => {
-    link.addEventListener('click', (event) => {
-      const items = document.querySelectorAll('.instructions-list__item.active');
-      items.forEach(item => {
-        item.classList.remove('active');
-      });
-
-      container.classList.remove('active');
-
-      event.stopPropagation();
-    });
   });
 
 }
